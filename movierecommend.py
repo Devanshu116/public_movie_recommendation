@@ -31,8 +31,7 @@ if st.button('Recommend Me'):
      st.write('Movies Recomended for you are:')
      # st.write(movie_recommend(option),show_url(option))
      df = pd.DataFrame({
-          'Movie Recommended': movie_recommend(option),
-          'Movie Url': show_url(option)
+          'Movie Recommended': movie_recommend(option)
      })
 
      st.table(df)
