@@ -13,14 +13,14 @@ option = st.selectbox(
 
 def show_url(movie):
      x=[]
-     index = movie_df[movie_df['title'] == movie].index[0]
+     index = movie_df[movie_df['original_title'] == movie].index[0]
      distances = sorted(list(enumerate(similarity[index])), reverse=True, key=lambda x: x[1])
      for i in distances[1:6]:
 
           x.append(movie_df.iloc[i[0]].urls)
      return(x)
 def movie_recommend(movie):
-     index = movie_df[movie_df['title'] == movie].index[0]
+     index = movie_df[movie_df['original_title'] == movie].index[0]
      distances = sorted(list(enumerate(similarity[index])), reverse=True, key=lambda x: x[1])
      l=[]
      for i in distances[1:6]:
