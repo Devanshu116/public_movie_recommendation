@@ -6,7 +6,7 @@ import numpy as np
 st.title("Movie Recommendation system")
 movie_df=pickle.load(open("movie_list.pkl","rb"))
 similarity=pickle.load(open("similarity.pkl","rb"))
-list_movie=np.array(movie_df["title"])
+list_movie=np.array(movie_df["original_title"])
 option = st.selectbox(
 "Select Movie ",
 (list_movie))
